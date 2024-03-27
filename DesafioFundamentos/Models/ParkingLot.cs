@@ -1,3 +1,5 @@
+using System;
+
 namespace DesafioFundamentos.Models
 {
     public class ParkingLot
@@ -17,9 +19,16 @@ namespace DesafioFundamentos.Models
             Console.Write("Type the vehicle plate: ");
             string plate = Console.ReadLine();
 
-            Vehicles.Add(plate);
+            if (String.IsNullOrEmpty(plate) || String.IsNullOrWhiteSpace(plate))
+            {
+                Console.WriteLine("Invalid plate");
+            }
+            else
+            {
+                Vehicles.Add(plate);
+                Console.WriteLine($"\nVehicle: {plate} successfully added");
+            }
 
-            Console.WriteLine($"\nVehicle: {plate} successfully added");
         }
 
         public void RemoveVehicle()

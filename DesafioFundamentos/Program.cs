@@ -26,6 +26,7 @@ while (showMenu)
     Console.WriteLine("2 - Remove vehicle");
     Console.WriteLine("3 - Print vehicles");
     Console.WriteLine("4 - End program");
+    Console.WriteLine();
 
     switch (Console.ReadLine())
     {
@@ -46,7 +47,7 @@ while (showMenu)
             break;
 
         default:
-            Console.WriteLine("Invalid option");
+            Console.WriteLine("\nInvalid option");
             break;
     }
 
